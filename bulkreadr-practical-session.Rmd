@@ -135,7 +135,7 @@ googlesheets4::gs4_deauth()
 
 ```{r example4, message=FALSE, warning=FALSE}
 
-# Let browse to see how the Google Sheets look like
+# Let browse to see how the data in the Google Sheets look like
 
 # googlesheets4::gs4_browse("https://docs.google.com/spreadsheets/d/1izO0mHu3L9AMySQUXGDn9GPs1n-VwGFSEoAKGhqVQh0")
 
@@ -157,7 +157,7 @@ read_gsheets(ss = sheet_id)
 
 ```{r example5}
 
-file_path <- system.file("extdata", "Wages.sav", package = "bulkreadr")
+file_path <- "data/extdata/Wages.sav"
 
 data <- read_spss_data(file = file_path)
 
@@ -185,8 +185,8 @@ data
 
 ```{r example7}
 
-file_path <- system.file("extdata", "Wages.dta", package = "bulkreadr")
-
+file_path <- "data/extdata/Wages.dta"
+  
 data <- read_stata_data(file = file_path)
 
 data
@@ -212,8 +212,8 @@ data
 
 # Creating a data dictionary from an SPSS file
 
-file_path <- system.file("extdata", "Wages.sav", package = "bulkreadr")
-
+file_path <- "data/extdata/Wages.sav"
+  
 wage_data <- read_spss_data(file = file_path)
 
 generate_dictionary(wage_data)
@@ -236,7 +236,7 @@ look_for(wage_data, "e")
 
 ## pull_out()
 
-`pull_out()` is similar to [. It acts on vectors, matrices, arrays and lists to extract or replace parts. It is pleasant to use with the magrittr (`⁠%>%`⁠) and base(`|>`) operators.
+`pull_out()` is similar to [. It acts on vectors, matrices, arrays and lists to extract or replace parts. It is pleasant to use with the magrittr (`⁠%>%`⁠) or base(`|>`) operator.
 
 ```{r example11}
 
@@ -254,7 +254,7 @@ top_10_richest_nig %>%
 
 ## convert_to_date()
 
-`convert_to_date()` parses an input vector into POSIXct date-time object. It is also powerful to convert from excel date number like `42370` into date value like `2016-01-01`.
+`convert_to_date()` parses an input vector into POSIXct date object. It is also powerful to convert from excel date number like `42370` into date value like `2016-01-01`.
 
 ```{r example12}
 
