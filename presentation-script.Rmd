@@ -103,6 +103,18 @@ class: middle
 knitr::include_graphics("images/folder.png")
 ```
 
+
+---
+class: middle
+
+## Excel/Google Sheets Workbook
+
+```{r, echo=FALSE, fig.align='left', out.height= "90%", out.width= "90%"}
+knitr::include_graphics("images/diamond.png")
+```
+
+
+
 ---
 class: middle, hide_logo
 

@@ -256,7 +256,7 @@ top_10_richest_nig %>%
 
 `convert_to_date()` parses an input vector into POSIXct date object. It is also powerful to convert from excel date number like `42370` into date value like `2016-01-01`.
 
-```{r example12}
+```{r example12a}
 
 ## ** heterogeneous dates **
 
@@ -275,6 +275,26 @@ convert_to_date(dates)
 convert_to_date(lubridate::now())
 
 ```
+
+
+```{r example12b}
+
+ogd_data <- read_excel_workbook("data/OGD.xlsx")
+
+
+# ogd_data %>% View()
+
+# Convert to POSIXct or Date object
+
+modified_ogd_data <- ogd_data  %>% 
+  mutate(Date_format = convert_to_date(Date))
+
+# modified_ogd_data %>% View()
+
+```
+
+
+
 
 ## inspect_na() 
 
