@@ -1,6 +1,6 @@
 ---
 title: "bulkreadr: The Ultimate Tool for Reading Data in Bulk"
-subtitle: "A Masterclass at International Association of Statistical Computing (IASC)"
+subtitle: "A Masterclass at the International Association of Statistical Computing (IASC)"
 author: "Ezekiel Adebayo Ogundepo"
 execute:
   echo: true
